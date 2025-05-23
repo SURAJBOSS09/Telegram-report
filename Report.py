@@ -5,14 +5,14 @@ import asyncio
 import time
 
 # Telegram API credentials
-api_id = 20893009
-api_hash = '93d24062457ef0b13c6846bb3d6e4fd3'
-phone_number = '+27611404746'
+api_id = '...'
+api_hash = '...'
+phone_number = '....'
 
-# Scammer's username
-target_username = '@viphacker777999'
+# Target channel username
+target_username = '@channel name'
 
-# Report messages
+# 3 report messages
 report_messages = [
     """SUBJECT CLARIFICATION:– IMPORTANT NOTICE.
 
@@ -42,8 +42,8 @@ async def report_user():
                 reason=InputReportReasonSpam(),
                 message=message
             ))
-            print(f"Message {msg_index} - Report {i + 1}/1000 sent")
-            time.sleep(2)
+            print(f"[{msg_index}] Report {i + 1}/1000 sent")
+            time.sleep(2)  # 2 second delay
 
     await client.disconnect()
     print("\n[✓] All 3000 reports sent successfully.")
